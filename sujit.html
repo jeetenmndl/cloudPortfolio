@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earbuds Brand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        .product {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+        }
+        .features {
+            text-align: left;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .features li{
+            margin-top: 10px;
+            font-size: large;
+        }
+        .contact, .introduction {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        button{
+            background-color: rgb(63, 63, 249);
+            color: white;
+            padding: 10px 80px;
+            border:none;
+            border-radius: 5px;
+        }
+        input{
+            padding:8px
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="introduction">
+            <h1>Welcome to Our Premium Earbuds Brand</h1>
+            <p>We specialize in high-quality earbuds designed for crystal-clear audio, comfort, and advanced features. Explore our collection and experience superior sound.</p>
+        </section>
+        
+        <div class="product">
+            <h2>Earbuds Model A</h2>
+            <img src="/earbuds1.jpg" alt="Earbuds Model A">
+            <ul class="features">
+                <li>Noise cancellation</li>
+                <li>Long battery life</li>
+                <li>Water-resistant</li>
+            </ul>
+            <div>
+                <button onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <h2>Earbuds Model B</h2>
+            <img src="/earbuds2.jpg" alt="Earbuds Model B">
+            <ul class="features">
+                <li>Enhanced bass</li>
+                <li>Touch controls</li>
+                <li>Fast charging</li>
+            </ul>
+            <div>
+                <button onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+        
+        <div class="product">
+            <h2>Earbuds Model C</h2>
+            <img src="/earbuds3.jpg" alt="Earbuds Model C">
+            <ul class="features">
+                <li>Bluetooth 5.2</li>
+                <li>Compact case</li>
+                <li>Ultra-lightweight</li>
+            </ul>
+            <div>
+                <button onclick="openModal()">Buy Now</button>
+            </div>
+        </div>
+        
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@earbudsbrand.com</p>
+            <p>Phone: 123-456-7890</p>
+            <p>Address: 123 Earbuds Street, Audio City</p>
+        </section>
+    </div>
+    
+    <div id="orderModal" class="modal">
+        <h2>Place Your Order</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="text" placeholder="Your Email">
+        <button onclick="placeOrder()">Submit</button>
+    </div>
+    
+    <script>
+        function openModal() {
+            document.getElementById('orderModal').style.display = 'block';
+        }
+        function placeOrder() {
+            alert("Order has been placed successfully!");
+            document.getElementById('orderModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
